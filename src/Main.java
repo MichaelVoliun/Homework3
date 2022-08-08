@@ -38,19 +38,16 @@ public class Main {
         //Задание 4
 
         int deliveryDistance = 95;
-        int interval1 = 20; //Первоначальный интервал - 1 день
-        int interval2 = 40; //Интервал, увеличивающий срок доставки на 1 день
 
-        if (deliveryDistance <= 20) {
-            System.out.println("Доставка зайтем 1 сутки");
-        }
-        else if (deliveryDistance > 20 && deliveryDistance <= interval1 + interval2) {
-            System.out.println("Доставка займет 2 суток");
-        }
-        else if (deliveryDistance > 20 && deliveryDistance <= interval1 + interval2*2) {
-            System.out.println("Доставка займет 3 суток");
-        }
+        int deliveryDays = 1;
 
+        if (deliveryDistance > 20) {
+            deliveryDays++;
+        }
+        if (deliveryDistance > 60) {
+            deliveryDays++;
+        }
+        System.out.println("Потребуется дней: " + deliveryDays);
 
 
 
